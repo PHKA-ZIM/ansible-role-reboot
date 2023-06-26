@@ -1,0 +1,8 @@
+---
+- name: Add reboot cron
+  ansible.builtin.include_tasks: install.yml
+  when: reboot_uninstall == false
+
+- name: Remove reboot cron
+  ansible.builtin.include_tasks: uninstall.yml
+  when: reboot_uninstall == true

@@ -1,0 +1,2 @@
+---
+reboot_cron_path: /etc/cron.d/

@@ -1,0 +1,8 @@
+---
+reboot_cron_schedule: "0 0 * * *"
+reboot_cron_filename: reboot
+reboot_scipt_path: /usr/sbin
+reboot_script_filename: reboot-server
+reboot_required_only: true
+reboot_required_file: /run/reboot-required
+reboot_uninstall: false

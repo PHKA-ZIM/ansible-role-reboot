@@ -1,0 +1,11 @@
+#!/bin/bash
+# {{ ansible_managed }}
+
+{% if reboot_required_only %}
+[ -f {{ reboot_required_file }} ]; then
+{% endif %}
+  /sbin/shutdown -r now
+  sleep 10
+{% if reboot_required_only %}
+fi
+{% endif %}
