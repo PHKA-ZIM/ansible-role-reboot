@@ -10,5 +10,6 @@
 
 - name: Remove reboot cron
   when: reboot_uninstall == true
+  block:
     - name: Clean
       ansible.builtin.include_tasks: clean.yml
