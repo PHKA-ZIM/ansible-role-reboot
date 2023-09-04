@@ -4,8 +4,8 @@
 {% if reboot_required_only %}
 if [ -f {{ reboot_required_file }} ]; then
 {% endif %}
-  /sbin/shutdown -r now
-  sleep 10
+  {{ reboot_shutdown_bin }} -r now
+  {{ reboot_sleep_bin }} 10
 {% if reboot_required_only %}
 fi
 {% endif %}

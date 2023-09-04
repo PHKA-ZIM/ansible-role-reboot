@@ -1,2 +1,6 @@
 ---
+reboot_requirements:
+  - cron
 reboot_cron_path: /etc/cron.d/
+reboot_sleep_bin: /usr/bin/sleep
+reboot_shutdown_bin: /usr/sbin/shutdown

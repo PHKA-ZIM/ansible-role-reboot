@@ -1,0 +1,12 @@
+---
+- name: Ensure cron file is absent
+  become: true
+  ansible.builtin.file:
+    path: "{{ reboot_cron_path }}/{{ reboot_cron_filename }}"
+    state: absent
+
+- name: Ensure script file is absent
+  become: true
+  ansible.builtin.file:
+    path: "{{ reboot_script_path }}/{{ reboot_script_filename }}"
+    state: absent
