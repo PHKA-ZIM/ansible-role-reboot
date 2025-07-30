@@ -1,14 +1,14 @@
 ---
 - name: Ensure cron file is created
   become: true
-  template:
+  ansible.builtin.template:
     src: cron.j2
     dest: "{{ reboot_cron_path }}/{{ reboot_cron_filename }}"
     mode: 0644
 
 - name: Ensure script file is created
   become: true
-  template:
+  ansible.builtin.template:
     src: script.j2
     dest: "{{ reboot_script_path }}/{{ reboot_script_filename }}"
     mode: 0750
